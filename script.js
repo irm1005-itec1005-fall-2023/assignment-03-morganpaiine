@@ -67,7 +67,7 @@ function addToDoItem(text) {
   };
 
   todoItems.push(newToDoItem);
-  console.log("ToDoItem Added", newToDoItem);
+  // console.log("ToDoItem Added", newToDoItem);
 }
 
  // Remove this line when you start working on the function
@@ -84,7 +84,7 @@ for(let i=0;i<todoItems.length;i++){
 
   if(todoItems[i].id==todoId){
     todoItems.splice(i,1);
-    console.log("ToDoItem Removed", todoItems[i]);
+    //console.log("ToDoItem Removed", todoItems[i]);
     break;
   }
     // Remove this line when you start working on the function
@@ -100,11 +100,11 @@ function markToDoItemAsCompleted(todoId) {
 for(let i=0;i<todoItems.length;i++){
   if(todoItems[i].id==todoId){
     todoItems[i].completed=true;
-    console.log("ToDoItem Completed", todoItems[i]);
+   // console.log("ToDoItem Completed", todoItems[i]);
     break;
   }
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+// Remove this line when you start working on the function
 }
 
 // Function to delete a task from the array
@@ -115,8 +115,9 @@ for(let i=0;i<todoItems.length;i++){
 // true or false depending on whether the item was successfully deleted
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
-
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+  removeToDoItem(todoId);
+   // Remove this line when you start working on the function
+ // console.log("toDoItemRemoved", todoItems);
 }
 
 // Function to clear all completed tasks
@@ -125,7 +126,7 @@ function deleteToDoItem(todoId) {
 function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+  //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
 
 // You can write your own tests here if you would like to test
@@ -136,3 +137,4 @@ function clearCompletedTasks() {
 //  removeToDoItem(0); // This should remove the todo item with ID 0 from the array
 //  markToDoItemAsCompleted(0); // This should mark the todo item with ID 0 as completed 
 
+}
