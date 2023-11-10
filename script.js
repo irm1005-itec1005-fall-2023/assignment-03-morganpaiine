@@ -125,7 +125,11 @@ function deleteToDoItem(todoId) {
 // as completed, remove it completely from the array
 function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
-
+for(let i=0;i<todoItems.length;i++){
+  if(todoItems[i].completed===true){
+    todoItems.splice(i,1);
+  }
+}
   //console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
 
