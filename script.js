@@ -47,7 +47,10 @@
 
 // Initialise an empty array with the variable name todoItems
 
+let todoItems = [];
+
 // Function to add a todo to the list
+function addToDoItem()
 // It should accept a string as a parameter (text of the todo item)
 // and it should add a new todo item to the todoItems array
 // The todo item should have the structure shown above
@@ -66,10 +69,16 @@ function addToDoItem(text) {
 // the function does not need to return anything
 function removeToDoItem(todoId) {
   // Implement the logic to add a task here
+for(let i=0;i<todoItems.length;i++){
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+  if(todoItems[i].id==todoId){
+    todoItems.splice(i,1);
+    console.log("ToDoItem Removed", todoItems[i]);
+    break;
+  }
+    // Remove this line when you start working on the function
+  }
 }
-
 // Function to mark a task as completed
 // It should accept a number as a parameter (id of the todo item)
 // Loop through the array of todos, and when you find the todo item with the id
@@ -77,6 +86,12 @@ function removeToDoItem(todoId) {
 // the function does not need to return anything
 function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
+for(let i=0;i<todoItems.length;i++){
+  if(todoItems[i].id==todoId){
+    todoItems[i].completed=true;
+    console.log("ToDoItem Completed", todoItems[i]);
+    break;
+  }
 
   console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
