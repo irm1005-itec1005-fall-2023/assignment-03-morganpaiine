@@ -48,19 +48,30 @@
 // Initialise an empty array with the variable name todoItems
 
 let todoItems = [];
+let idCounter = 0;
 
 // Function to add a todo to the list
-function addToDoItem()
+
 // It should accept a string as a parameter (text of the todo item)
 // and it should add a new todo item to the todoItems array
 // The todo item should have the structure shown above
 // It's really important that you have a unique ID for each todo item that you push onto the array
 // the function does not need to return anything
 function addToDoItem(text) {
-  // Implement the logic to add a task here
+  const newToDoItem = {
+    id: idCounter++,
+    text: text,
+    completed: false,
 
-  console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
+  // Implement the logic to add a task here
+  };
+
+  todoItems.push(newToDoItem);
+  console.log("ToDoItem Added", newToDoItem);
 }
+
+ // Remove this line when you start working on the function
+
 
 // Function to remove a todo to the list
 // It should accept a number as a parameter (id of the todo item)
@@ -123,4 +134,5 @@ function clearCompletedTasks() {
 //  addToDoItem("Test ToDo"); // This should add a new todo item to the array
 //  console.log(todoItems); // This should show the todo item you added
 //  removeToDoItem(0); // This should remove the todo item with ID 0 from the array
-//  markToDoItemAsCompleted(0); // This should mark the todo item with ID 0 as completed
+//  markToDoItemAsCompleted(0); // This should mark the todo item with ID 0 as completed 
+
